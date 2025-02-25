@@ -2,9 +2,9 @@
 const Media = require('./Media');
 // create your Music class:
 class Music extends Media{
-    static shortestAlbum(music){
-        let shortest = music[0];
-        for (let music of music){
+    static shortestAlbum(array){
+        let shortest = array[0];
+        for (const music of array){
             if (music.length < shortest.length){
                 shortest = music;
             }
@@ -18,7 +18,7 @@ class Music extends Media{
     this.length = length;
     }
     summary(){
-        return `Title: ${this.title}, Artist: ${this.artist}, Year: ${this.year}, Genre: ${this.genre}, Length: ${this.length}`;
+        return `Title: ${this.title}, Artist: ${this.artist}, Year: ${this.year}, Genre: ${this.genre}, Length: ${this.length} seconds`;
     }
 }
 // don't change below
