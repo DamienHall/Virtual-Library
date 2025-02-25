@@ -2,9 +2,9 @@
 const Media = require('./Media');
 // create your Movie class:
 class Movie extends Media{
-    static longestMovie(movie){
-        let longest = movie[0];
-        for (let movie of movies){
+    static longestMovie(array){
+        let longest = array[0];
+        for (const movie of array){
             if (movie.duration > longest.duration){
                 longest = movie;
             }
@@ -12,13 +12,14 @@ class Movie extends Media{
         return longest;
     }
 
-    constructor( title, year, genre, director, rating ){
+    constructor( title, year, genre, director, duration, rating ){
     super(title, year, genre);    
     this.director = director;
+    this.duration = duration;
     this.rating = rating;
 }
    summary(){
-    return `Title: ${this.title}, Director: ${this.director}, Year: ${this.year}, Genre: ${this.genre}, Duration: ${this.duration}, Rating: ${this.rating}`;
+    return `Title: ${this.title}, Director: ${this.director}, Year: ${this.year}, Genre: ${this.genre}, Rating: ${this.rating}`;
 }
 }
 

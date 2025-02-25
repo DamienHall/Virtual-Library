@@ -7,7 +7,7 @@ class Book extends Media {
     static highestRating(array) {
         let highestRatedBook = array[0];
 
-        for (book of array) {
+        for (const book of array) {
             if (book.rating > highestRatedBook.rating) {
                 highestRatedBook = book;
             }
