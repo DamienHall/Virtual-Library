@@ -1,7 +1,7 @@
 // import the Media class:
 const Media = require('./Media');
 // create your Movie class:
-class Movie{
+class Movie extends Media{
     static longestMovie(movie){
         let longest = movie[0];
         for (let movie of movies){
@@ -18,7 +18,7 @@ class Movie{
     this.rating = rating;
 }
    summary(){
-    return `Title: ${this.title}, Director: ${this.director}, Year: ${year}, Genre: ${this.year}, Duration: ${this.duration}, Rating: ${this.rating}`;
+    return `Title: ${this.title}, Director: ${this.director}, Year: ${this.year}, Genre: ${this.genre}, Duration: ${this.duration}, Rating: ${this.rating}`;
 }
 }
 
